@@ -44,7 +44,7 @@ function addItemToCart(name, items, cart) {
 	cart.push(findItem(name, items));
 }
 
-module.exports = { total, remove: removeItemNamed, add: addItemToCart };
+module.exports = { total, remove: removeItemNamed, add: addItemToCart, subtotal };
 
 
 
