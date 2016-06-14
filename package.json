@@ -1,0 +1,15 @@
+{
+  "name": "everlane",
+  "version": "1.0.0",
+  "description": "First e-commerce project!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kushal Bhansali",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "mongodb": "^2.1.18"
+  }
+}
