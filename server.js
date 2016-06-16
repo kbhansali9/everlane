@@ -13,5 +13,5 @@ var ChargeController = require('./controllers/chargeController');
 app.get('/', IndexController.welcome);
 app.get('/inventory', InventoryController.all);
 app.get('/checkout', CheckoutController.showCart);
-app.post('/charge', ChargeController.charge);
+app.get('/confirm', ChargeController.charge);
 app.listen(3000);

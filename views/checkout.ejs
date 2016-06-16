@@ -13,8 +13,8 @@
 		}
 	</style>
 
-</script>
-
+	<script src="https://checkout.stripe.com/checkout.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
 </head>
 <body>
 
@@ -62,19 +62,36 @@
 		</tr>			
 	</table>
 
-		<a href="/inventory">Continue Shopping..</a>
+	<a href="/inventory">Continue Shopping..</a>
 
-	<form action="/charge" method="POST">
-		<script
-			src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-			data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
-			data-amount="<%= (total.toFixed(2))*100 %>"
-			data-name="Everlane"
-			data-description="Radical Transparency"
-			data-image="https://d1qb2nb5cznatu.cloudfront.net/startups/i/47063-05f369b7b1527132ba05343f1b8ebb91-medium_jpg.jpg"
-	data-locale="auto">
-		</script>
-	</form>
+	<button id="customButton">Purchase</button>
 
+	<script>
+		var handler = StripeCheckout.configure({
+			key: 'pk_test_Hf5YzhbmfP9ns1akMPhEpDMv',
+			image: 'https://d1qb2nb5cznatu.cloudfront.net/startups/i/47063-05f369b7b1527132ba05343f1b8ebb91-medium_jpg.jpg',
+			locale: 'auto',
+			token: function(token) {
+				var data = {
+					'amount': <%- total.toFixed(2) %>,
+					'cart': <%- JSON.stringify(items) %>,
+					'token': token
+				};
+				location.href = "/confirm?data=" + JSON.stringify(data);
+			}
+		});
+
+		$('#customButton').on('click', function(e) {
+			handler.open({
+				name: 'Everlane',
+				description: 'Radical Transparency',
+				amount: <%- total.toFixed(2) * 100 %>
+			});
+		});
+
+		$(window).on('popstate', function() {
+		    handler.close();
+		});
+	</script>
 </body>
 </html>
