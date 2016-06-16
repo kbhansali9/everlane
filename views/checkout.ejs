@@ -2,54 +2,79 @@
 <html>
 <head>
 	<title>Checkout</title>
+	<style>
+		table, th {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		th, td {
+			padding: 5px;
+			text-align: center;
+		}
+	</style>
+
+</script>
+
 </head>
 <body>
-<table>
-	<tr>
-		<th>Image</th>
-		<th>Name</th>
-		<th>Price</th>
-	</tr>
-	<% for (item of items) { %>
-		<tr>
-			<td><img src="<%= item.image %>" height="50" width="50"></td>
-			<td><%= item.name %></td>
-			<td>$<%= item.price.toFixed(2) %></td>
-		</tr>
-	<% } %>
-	<tr>
-		<td>Sub-total</td>
-		<td></td>
-		<td>$<%= subtotal.toFixed(2) %></td>
-	</tr>
-	<tr>
-		<td>Discount</td>
-		<td></td>
-		<td>- $<%= discounts.toFixed(2) %></td>
-	</tr>
-	<tr>
-		<td>Taxes</td>
-		<td></td>
-		<td>+ $<%= taxes.toFixed(2) %></td>
-	</tr>
-	<tr>
-		<td>Total</td>
-		<td></td>
-		<td>$<%= total.toFixed(2) %></td>
-	</tr>
 
-			
-</table>
-<form action="/charge" method="POST">
-  <script
-    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
-    data-amount="<%= (total.toFixed(2))*100 %>"
-    data-name="Everlane"
-    data-description="Radical Transparency"
-    data-image="https://d1qb2nb5cznatu.cloudfront.net/startups/i/47063-05f369b7b1527132ba05343f1b8ebb91-medium_jpg.jpg"
-    data-locale="auto">
-  </script>
-</form>
+	<p>
+		<a href="/inventory">
+			<img border="0" alt="W3Schools" src="https://d1qb2nb5cznatu.cloudfront.net/startups/i/47063-05f369b7b1527132ba05343f1b8ebb91-medium_jpg.jpg" width="100" height="100">
+		</a>
+	</p> 
+
+	<table style="width:100%">
+		<caption>
+			<h2>One step away to get to your doorstep..</h2>
+		</caption>
+		<tr>
+			<th>Item</th>
+			<th>Description</th>
+			<th>Price</th>
+		</tr>
+		<% for (item of items) { %>
+			<tr>
+				<td><img src="<%= item.image %>" height="50" width="50"></td>
+				<td><%= item.name %></td>
+				<td>$<%= item.price.toFixed(2) %></td>
+			</tr>
+		<% } %>
+		<tr>
+			<td>Sub-total</td>
+			<td></td>
+			<td>$<%= subtotal.toFixed(2) %></td>
+		</tr>
+		<tr>
+			<td>Discount</td>
+			<td></td>
+			<td>- $<%= discounts.toFixed(2) %></td>
+		</tr>
+		<tr>
+			<td>Taxes</td>
+			<td></td>
+			<td>+ $<%= taxes.toFixed(2) %></td>
+		</tr>
+		<tr>
+			<td>Total</td>
+			<td></td>
+			<td>$<%= total.toFixed(2) %></td>
+		</tr>			
+	</table>
+
+		<a href="/inventory">Continue Shopping..</a>
+
+	<form action="/charge" method="POST">
+		<script
+			src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+			data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+			data-amount="<%= (total.toFixed(2))*100 %>"
+			data-name="Everlane"
+			data-description="Radical Transparency"
+			data-image="https://d1qb2nb5cznatu.cloudfront.net/startups/i/47063-05f369b7b1527132ba05343f1b8ebb91-medium_jpg.jpg"
+	data-locale="auto">
+		</script>
+	</form>
+
 </body>
 </html>
