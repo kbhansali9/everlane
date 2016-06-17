@@ -9,20 +9,26 @@ function charge(req, res) {
   var email = data.token.email;
   var token_id = data.token.id;
 
-  Charge.chargeToken(amount, token_id, function(charge_id) {
-    var transaction = {
-      'amount': amount,
-      'cart': cart,
-      'charge_id': charge_id,
-      'email': email
-    };
-
-    Db.insertOne('transactions', transaction, function() {
-
+  Charge.chargeToken(amount, token_id, function(err, charge_id) {
+    if (err) {
+      var message = err.message;
       res.render('../views/confirmation.ejs', {
-        'email': email
+        'message': message
       });
-    });
+    } else {
+      var transaction = {
+        'amount': amount,
+        'cart': cart,
+        'charge_id': charge_id,
+        'email': email
+      };
+
+      Db.insertOne('transactions', transaction, function() {
+        res.render('../views/confirmation.ejs', {
+          'email': email
+        });
+      });
+    }
   });
 }
 

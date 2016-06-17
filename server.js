@@ -14,4 +14,5 @@ app.get('/', IndexController.welcome);
 app.get('/inventory', InventoryController.all);
 app.get('/checkout', CheckoutController.showCart);
 app.get('/confirm', ChargeController.charge);
+app.use("/style",express.static(__dirname + "/style"));
 app.listen(3000);

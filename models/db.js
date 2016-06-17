@@ -1,5 +1,5 @@
 var MongoClient = require('mongodb').MongoClient;
-var url = 'mongodb://localhost:27017/test';
+var url = 'mongodb://admin:shop@ds017544.mlab.com:17544/main';
 
 function find(collection, callback) {
   var docs = [];

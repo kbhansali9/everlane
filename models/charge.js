@@ -9,9 +9,9 @@ function chargeToken(amount, token_id, callback) {
 	  source: token_id
 	}, function(err, charge) {
     if (err) {
-      console.log(err);
+      callback(err, null);
     } else {
-      callback(charge.id);
+      callback(null, charge.id);
     }
 	});
 }

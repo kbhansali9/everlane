@@ -2,9 +2,40 @@
 <html>
 <head>
 	<title>Confirmation</title>
+	<link rel='stylesheet' href='/style/mystyle.css'>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="https://checkout.stripe.com/checkout.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
 </head>
 <body>
-	<h3>Thank you for shopping with us!</h3>
-	<p>The consitmation email had been sent to <%= email %></p>
+	<div class="container">
+		<div class="page-header">
+			<a href="/">
+				<img border="0" alt="W3Schools" src="https://d1qb2nb5cznatu.cloudfront.net/startups/i/47063-05f369b7b1527132ba05343f1b8ebb91-medium_jpg.jpg" width="100" height="100">
+			</a> 
+		</div>
+		<% if (message) { %>
+			<h3>I'm sorry your transaction did not go through!</h3>
+		<% } else { %>
+			<h3>Thank you for shopping with us!</h3>
+		<% } %>
+		<blockquote>
+		<% if (message) { %>
+			<div class="alert alert-warning">
+				<p><%= message %></p>
+			</div>
+			<footer>Everlane Ninja!</footer>			
+		<% } else { %>
+			<div class="alert alert-success">
+				<p>The confirmation has been sent to your email: <%= email %></p>
+			</div>
+			<footer>Everlane Ninja!</footer>
+		<% } %>
+		</blockquote>
+	</div>
 </body>
 </html>
