@@ -13,7 +13,8 @@ function charge(req, res) {
     if (err) {
       var message = err.message;
       res.render('../views/confirmation.ejs', {
-        'message': message
+        'message': message,
+        'email': ''
       });
     } else {
       var transaction = {
@@ -25,6 +26,7 @@ function charge(req, res) {
 
       Db.insertOne('transactions', transaction, function() {
         res.render('../views/confirmation.ejs', {
+          'message': false,
           'email': email
         });
       });
