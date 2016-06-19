@@ -1,0 +1,11 @@
+.navbar.transparent.navbar-inverse .navbar-inner {
+   background: rgba(0,0,0,0.4);
+}
+
+#landing {
+      background-image: url("http://www.creativeboysclub.com/wp-content/uploads/2012/04/0110.jpg");
+      background-size: cover;
+      width: 100vw;
+      height: 100vh;
+      background-position: center;
+}
