@@ -56,12 +56,18 @@
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Item 1</a></li>
-            <li><a href="#">Item 2</a></li>
-            <li role="separator" class="divider"></li>
-            <li><button onclick="checkout()" class="btn btn-success navbar-right">Checkout</button></li>
-          </ul>
+            <ul class="dropdown-menu">
+            <% for (item of items) { %>
+              
+                <li><img class="img" src="<%= item.image %>" height="50" width="50">
+                <h6><%= item.name %></h6>
+                <h6>$<%= item.price.toFixed(2) %></h6>
+                </li>
+                <li role="separator" class="divider"></li>
+                <li><button onclick="checkout()" class="btn btn-success navbar-right">Checkout</button></li>
+            <% } %> <!--cart needs to be updated -->
+            
+            </ul>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -86,7 +92,6 @@
     </nav>
   <div class="container">
   </div>
-  
 </div>
 <br>
 <br>
@@ -99,12 +104,17 @@
 		<h3 id="cartPrice">Welcome to Everlane!</h3>
 
 		<% for (item of items) { %>
-			<img class="img" src="<%= item.image %>" height="300" width="300">
-			<h2><%= item.name %></h2>
-			<h5><%= item.category %></h5>
-			<h3>$<%= item.price.toFixed(2) %></h3>
-			<button onclick="addToCart('<%= item._id %>')" class="btn btn-success">add to cart</button><br>
-			<br>
+			<table>
+        <tr>
+        <th><img class="img" src="<%= item.image %>" height="200" width="200"></th>
+  			<td><h2><%= item.name %></h2>
+  			<h5><%= item.category %></h5>
+  			<h3>$<%= item.price.toFixed(2) %></h3>
+  			<button onclick="addToCart('<%= item._id %>')" class="btn btn-success">add to cart</button><br>
+        </td>
+        <br>
+        </tr>
+      </table>
 		<% } %>
 	</div>
 </body>
