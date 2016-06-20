@@ -1,0 +1,11 @@
+.navbar.transparent.navbar-inverse .navbar-inner {
+   background: rgba(0,0,0,0.4);
+}
+
+.navbar a {
+	color: #7b7474;
+}
+
+.img:hover {
+	opacity: 0.5;
+}

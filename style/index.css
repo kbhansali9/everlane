@@ -13,8 +13,8 @@
 
 }*/
 
-.navbar.transparent.navbar-inverse .navbar-inner {
-   background: rgba(0,0,0,0.4);
+.navbar.transparent.navbar-inverse .navbar-inner:hover {
+   background: rgba(255,255,255,255);
 }
 
 #landing {
@@ -24,4 +24,10 @@
       height: 100vh;
       background-position: center;
 }
+.navbar a:hover {
+    color: #3b6a70 !important;
+}
 
+.navbar a {
+	color: #7b7474;
+}
