@@ -13,9 +13,6 @@
 
 </head>
 <body>
-<div class="text">
-	<p>Somthing</p>
-</div>
 <div id="landing" class="navbar transparent navbar-inverse navbar-fixed-top">
 		<nav class="navbar-inner">
 			<div class="container">
@@ -27,11 +24,14 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					</button>
-				<a class="navbar-brand" href="/">Everlane</a>
 				</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<div id="top">
+				<h1 class="text">E V E R L A N E</h1>
+				</div>
+				<div>
 				<ul class="nav navbar-nav">
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Men<span class="caret"></span></a>
@@ -57,7 +57,10 @@
 							<li><a href="#"><strong>SALE ITEMS!</strong></a></li>
 						</ul>
 					</li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Visit Us</a></li>
 				</ul>
+
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart<span class="caret"></span></a>
@@ -65,7 +68,7 @@
 						<li><a href="#">Item 1</a></li>
 						<li><a href="#">Item 2</a></li>
 						<li role="separator" class="divider"></li>
-						<li><button onclick="checkout()" class="btn btn-success navbar-right">Checkout</button></li>
+						<li><button onclick="checkout()" class="btn btn-success">Checkout</button></li>
 					</ul>
 					</li>
 				</ul>
@@ -80,6 +83,7 @@
 					</ul>
 					</li>
 				</ul>
+				</div>
 				<!--<form class="navbar-form navbar-left" role="search">
 					<div class="form-group">
 						<input type="text" class="form-control" placeholder="Search">
@@ -89,12 +93,20 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid-->
 		</nav>
-	<div class="container">
+	<div class="center">
+		Centered
 	</div>
 	
 </div> <!--all the page content except the footer-->
 <div class="footer">
-	This footer will always be positioned at the bottom of the page, but <strong>not fixed</strong>.
+	footer
 </div>
 </body>
+<script type="text/javascript">
+	var cart = [];
+		function checkout() {
+			location.href = '/checkout?cart=' + JSON.stringify(cart);
+		}
+
+</script>
 </html>

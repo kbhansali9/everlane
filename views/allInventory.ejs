@@ -22,7 +22,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           </button>
-        <a class="navbar-brand" href="/">Everlane</a>
+        <a class="navbar-brand" href="/">EVERLANE</a>
         </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -55,20 +55,14 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart<span class="caret"></span></a>
+          <a href="#" id="drTg" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart<span class="caret"></span></a>
             <ul class="dropdown-menu">
-            <% for (item of items) { %>
-              
-                <li><img class="img" src="<%= item.image %>" height="50" width="50">
-                <h6><%= item.name %></h6>
-                <h6>$<%= item.price.toFixed(2) %></h6>
-                </li>
-                <li role="separator" class="divider"></li>
-                <li><button onclick="checkout()" class="btn btn-success navbar-right">Checkout</button></li>
-            <% } %> <!--cart needs to be updated -->
-            
+              <h4 id="cartPrice"></h4>
+              <li><button onclick="checkout()" class="btn btn-success">Checkout</button></li>
+           <!--cart needs to be updated -->
             </ul>
           </li>
+          
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
@@ -106,8 +100,8 @@
 		<% for (item of items) { %>
 			<table>
         <tr>
-        <th><img class="img" src="<%= item.image %>" height="200" width="200"></th>
-  			<td><h2><%= item.name %></h2>
+        <th><img class="img" src="<%= item.image %>"></th>
+  			<td><h3><%= item.name %></h3>
   			<h5><%= item.category %></h5>
   			<h3>$<%= item.price.toFixed(2) %></h3>
   			<button onclick="addToCart('<%= item._id %>')" class="btn btn-success">add to cart</button><br>
@@ -129,9 +123,11 @@
 				break;
 			}
 		}
-
+    
 		var price = calculateSubtotal();
-		document.getElementById("cartPrice").innerHTML = "Cart Price is: $" + price.toFixed(2);
+    $('#drTg.dropdown-toggle').dropdown('toggle');
+
+		document.getElementById("cartPrice").innerHTML = "Cart Total: $" + price.toFixed(2);
 	}
 
 	function calculateSubtotal() {

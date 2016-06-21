@@ -14,6 +14,7 @@
 }*/
 
 .navbar.transparent.navbar-inverse .navbar-inner:hover {
+  transition: all 1s;
    background: rgba(255,255,255,255);
 }
 
@@ -24,10 +25,27 @@
       height: 100vh;
       background-position: center;
 }
-.navbar a:hover {
-    color: #3b6a70 !important;
+
+.center {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    color: white;
 }
 
-.navbar a {
-	color: #7b7474;
+
+#top{
+  width:100%;
+  text-align: center;
+}
+
+.navbar-inner h1, .navbar-inner a {
+  color:white !important;
+}
+
+.navbar-inner:hover h1, .navbar-inner:hover a {
+  color: #3b6a70 !important;
 }

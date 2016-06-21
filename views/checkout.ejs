@@ -93,51 +93,71 @@
       </div><!-- /.container-fluid-->
     </nav>
 </div>
-	<div class="container-fluid"> 
-		<br>	
-		<p>
-		<table style="width:100%" class="table">
-			<caption >
-				<h2>One step away to get to your doorstep..</h2>
-			</caption>
-			<tr>
-				<th>Item</th>
-				<th>Description</th>
-				<th>Price</th>
-			</tr>
-			<% for (item of items) { %>
-				<tr>
-					<td><img src="<%= item.image %>" height="50" width="50"></td>
-					<td><%= item.name %></td>
-					<td>$<%= item.price.toFixed(2) %></td>
-				</tr>
-			<% } %> 
-			<tr>
-				<td>Sub-total</td>
-				<td></td>
-				<td>$<%= subtotal.toFixed(2) %></td>
-			</tr>
-			<tr>
-				<td>Discount</td>
-				<td></td>
-				<td>- $<%= discounts.toFixed(2) %></td>
-			</tr>
-			<tr>
-				<td>Taxes</td>
-				<td></td>
-				<td>+ $<%= taxes.toFixed(2) %></td>
-			</tr>
-			<tr>
-				<th>Total</th>
-				<th></th>
-				<th>$<%= total.toFixed(2) %></th>
-			</tr>			
-		</table>
-		</p>
-		<button type="button" class="pull-left btn btn-success">
-			<a href="/inventory" id="continueShopping">Continue Shopping...</a>
-		</button>
-		<button type="button" class="pull-right btn btn-success" id="customButton">Purchase</button>
+	<div class="container-fluid">
+  	<table class="table">
+    <br><br><br><br><br><br>
+    <tr>
+      <td>
+    		<p>
+    		<table style="width:80%" class="table">
+    			<caption>
+    				One step away to get to your doorstep..
+    			</caption>
+    			<tr>
+    				<th>Item</th>
+    				<th>Description</th>
+    				<th>Price</th>
+    			</tr>
+    			<% for (item of items) { %>
+    				<tr>
+    					<td><img src="<%= item.image %>" height="55" width="55"></td>
+    					<td><%= item.name %></td>
+    					<td>$<%= item.price.toFixed(2) %></td>
+    				</tr>
+    			<% } %> 
+            <tr>
+              <td><button type="button" class="pull-left btn btn-success" href="/inventory" id="continueShopping">Continue Shopping...</button></td>
+              <td></td>
+              <td></td>
+            </tr>
+    		</table>
+        </p>
+      </td>
+      <td>
+      <p>
+      <table style="width:60%" class="table" bgcolor="#00FF00">
+        <caption>Order Summary</caption>
+        <tr>
+  				<td>Sub-total</td>
+  				<td></td>
+  				<td align="right">$<%= subtotal.toFixed(2) %></td>
+  			</tr>
+  			<tr>
+  				<td>Discount</td>
+  				<td></td>
+  				<td style="color:red;" align="right">$<%= discounts.toFixed(2) %></td>
+  			</tr>
+  			<tr>
+  				<td>Taxes</td>
+  				<td></td>
+  				<td align="right">$<%= taxes.toFixed(2) %></td>
+  			</tr>
+  			<tr>
+  				<td><b>Total</b></td>
+  				<td></td>
+  				<td align="right"><b>$<%= total.toFixed(2) %></b></td>
+  			</tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td align="right"><button type="button" class="btn btn-success" id="customButton">Purchase</button></td>
+        </tr>
+  		</table>
+  		</p>
+      </td>
+    </tr>
+    </table>
+  </div>
 
 		<script>
 			var handler = StripeCheckout.configure({
