@@ -12,11 +12,17 @@ var InventoryController = require('./controllers/inventoryController');
 var IndexController = require('./controllers/indexController');
 var CheckoutController = require('./controllers/checkoutController');
 var ChargeController = require('./controllers/chargeController');
+var ShippingController = require('./controllers/shippingController');
+var LoginController = require('./controllers/loginController');
+var RegisterController = require('./controllers/registerController');
 
 app.get('/', IndexController.welcome);
 app.get('/inventory', InventoryController.all);
 app.get('/checkout', CheckoutController.showCart);
 app.get('/confirm', ChargeController.charge);
+app.get('/shipping', ShippingController.details);
+app.get('/login', LoginController.loginDetails);
+app.get('/register', RegisterController.registerDetails);
 app.use("/style",express.static(__dirname + "/style"));
 
 app.listen(app.get('port'), function() {

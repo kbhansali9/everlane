@@ -14,8 +14,13 @@
 }*/
 
 .navbar.transparent.navbar-inverse .navbar-inner:hover {
-  transition: all 1s;
+  transition: all 0.5s;
    background: rgba(255,255,255,255);
+}
+
+.nav {
+  font-family: helvetica neue;
+  font-size: 13px;
 }
 
 #landing {
@@ -37,9 +42,10 @@
 }
 
 
-#top{
+#header{
   width:100%;
   text-align: center;
+  font-family: Helvetica neue;
 }
 
 .navbar-inner h1, .navbar-inner a {
@@ -48,4 +54,25 @@
 
 .navbar-inner:hover h1, .navbar-inner:hover a {
   color: #3b6a70 !important;
+}
+
+#shopNow {
+  border-radius: 0px;
+  color: #505050;
+  text-decoration: none;
+  border-color: white;
+  font-size: 12px;
+  margin-top: 10px;
+  margin-right: 20px;
+  line-height: 30px;
+}
+.btn-success {
+  border-radius: 0px !important;
+  text-decoration: none !important;
+  border-color: white !important;
+  font-size: 13px !important;
+}
+
+#checkoutBtn {
+  text-align: center;
 }

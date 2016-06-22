@@ -22,7 +22,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           </button>
-        <a class="navbar-brand" href="/">EVERLANE</a>
+        <a class="navbar-brand" href="/">Everlane</a>
         </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -55,21 +55,21 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
-          <a href="#" id="drTg" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart<span class="caret"></span></a>
+          <a href="#" id="drTg" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Cart<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <h4 id="cartPrice"></h4>
-              <li><button onclick="checkout()" class="btn btn-success">Checkout</button></li>
-           <!--cart needs to be updated -->
+              <li class="dropdown-item"></li>
+              <h4><li id="cartPrice"></li></h4>
+              <li role="separator" class="divider"></li>
+              <li id="checkoutBtn"><button onclick="checkout()" class="btn btn-success">Checkout</button></li>
             </ul>
           </li>
-          
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Returning Customer?</a></li>
-            <li><a href="#">New Customer?</a></li>
+            <li><a href="/login">Returning Customer?</a></li>
+            <li><a href="/register">New Customer?</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">Login via Facebook</a></li>
           </ul>
@@ -101,9 +101,10 @@
 			<table>
         <tr>
         <th><img class="img" src="<%= item.image %>"></th>
-  			<td><h3><%= item.name %></h3>
+  			<td>
+        <h4><%= item.name %></h4>
   			<h5><%= item.category %></h5>
-  			<h3>$<%= item.price.toFixed(2) %></h3>
+  			<h5>$<%= item.price.toFixed(2) %></h5>
   			<button onclick="addToCart('<%= item._id %>')" class="btn btn-success">add to cart</button><br>
         </td>
         <br>
@@ -112,35 +113,35 @@
 		<% } %>
 	</div>
 </body>
+
 <script type="text/javascript">
-	var cart = [];
-	var inventory = <%- JSON.stringify(items) %>;
+    var cart = [];
+    var inventory = <%- JSON.stringify(items) %>;
 
-	function addToCart(item_id) {
-		for (item of inventory) {
-			if (item_id == item._id) {
-				cart.push(item);
-				break;
-			}
-		}
-    
-		var price = calculateSubtotal();
-    $('#drTg.dropdown-toggle').dropdown('toggle');
+    function addToCart(item_id) {
+        for (item of inventory) {
+            if (item_id == item._id) {
+            cart.push(item);
+            $('#drTg').dropdown('toggle');
+            break;
+            }
+    }
+    var price = calculateSubtotal();
+    document.getElementById("cartPrice").innerHTML = "Cart Total: $" + price.toFixed(2);
+    $('.dropdown-item').prepend('<p>' + item.name +'<strong>'+' $'+ item.price.toFixed(2) +'</strong>'+'</p>');
+    }   
 
-		document.getElementById("cartPrice").innerHTML = "Cart Total: $" + price.toFixed(2);
-	}
+    function calculateSubtotal() {
+        var subtotal = 0;
+        for (item of cart) {
+            subtotal += item.price;
+            }
+        return subtotal;
+    }
 
-	function calculateSubtotal() {
-		var subtotal = 0;
-		for (item of cart) {
-			subtotal += item.price;
-		}
-		return subtotal;
-	}
-
-	function checkout() {
-		location.href = '/checkout?cart=' + JSON.stringify(cart);
-	}
+    function checkout() {
+        location.href = '/checkout?cart=' + JSON.stringify(cart);
+    }
 
 </script>
 </html>

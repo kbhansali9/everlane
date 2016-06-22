@@ -28,11 +28,11 @@
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<div id="top">
+				<div id="header">
 				<h1 class="text">E V E R L A N E</h1>
 				</div>
 				<div>
-				<ul class="nav navbar-nav">
+				<ul class="nav navbar-nav" >
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Men<span class="caret"></span></a>
 						<ul class="dropdown-menu">
@@ -65,10 +65,10 @@
 					<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart<span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Item 1</a></li>
-						<li><a href="#">Item 2</a></li>
-						<li role="separator" class="divider"></li>
-						<li><button onclick="checkout()" class="btn btn-success">Checkout</button></li>
+						<li class="dropdown-item"></li>
+              			<h4><li id="cartPrice"></li></h4>
+              			<li role="separator" class="divider"></li>
+              			<li id="checkoutBtn"><button onclick="checkout()" class="btn btn-success">Checkout</button></li>
 					</ul>
 					</li>
 				</ul>
@@ -76,8 +76,8 @@
 					<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login<span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Returning Customer?</a></li>
-						<li><a href="#">New Customer?</a></li>
+						<li><a href="/login">Returning Customer?</a></li>
+						<li><a href="register">New Customer?</a></li>
 						<li role="separator" class="divider"></li>
 						<li><a href="#">Login via Facebook</a></li>
 					</ul>
@@ -94,7 +94,7 @@
 			</div><!-- /.container-fluid-->
 		</nav>
 	<div class="center">
-		Centered
+		<button type="button" class="btn btn-default" id="shopNow"><a href="/inventory" style="color:#505050">SHOP NOW</a></button>
 	</div>
 	
 </div> <!--all the page content except the footer-->
