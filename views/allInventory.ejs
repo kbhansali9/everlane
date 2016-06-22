@@ -58,7 +58,7 @@
           <a href="#" id="drTg" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Cart<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li class="dropdown-item"></li>
-              <h4><li id="cartPrice"></li></h4>
+              <li id="cartPrice"></li>
               <li role="separator" class="divider"></li>
               <li id="checkoutBtn"><button onclick="checkout()" class="btn btn-success">Checkout</button></li>
             </ul>
@@ -128,7 +128,7 @@
     }
     var price = calculateSubtotal();
     document.getElementById("cartPrice").innerHTML = "Cart Total: $" + price.toFixed(2);
-    $('.dropdown-item').prepend('<p>' + item.name +'<strong>'+' $'+ item.price.toFixed(2) +'</strong>'+'</p>');
+    $('.dropdown-item').prepend('<p>' + item.name +' $'+ item.price.toFixed(2)+'</p>');
     }   
 
     function calculateSubtotal() {
