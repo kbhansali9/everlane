@@ -1,0 +1,20 @@
+.navbar.navbar-inverse.transparent.navbar-default {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.navbar.navbar-inverse.transparent.navbar-default:hover {
+    background-color: rgba(0,0,0,1);
+}
+
+#header {
+  color: white !important;
+}
+
+.navbar-brand {
+  font-family: Flamenco;
+}
+
+.glyphicon-shopping-cart {
+  color: blue;
+}
+/*defaul navabr options for every page*/

@@ -1,0 +1,52 @@
+.navbar.navbar-inverse.transparent.navbar-default {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.navbar.navbar-inverse.transparent.navbar-default:hover {
+    background-color: rgba(0,0,0,1);
+}
+
+#header {
+  color: white !important;
+}
+
+.navbar-brand {
+  font-family: Flamenco;
+}
+
+.glyphicon-shopping-cart {
+  color: blue;
+}
+/*defaul navabr options for every page*/
+
+
+/*.template_main {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 18px 48px;
+	flex: 1 0 auto;
+	min-height: 240px;
+}
+
+main {
+	display: block;	
+}
+
+.template_content {
+	visibility: visible;
+}
+
+.account_form  {
+	max-width: 284px;
+	margin: 48px auto;
+}
+
+.account-form_form {
+	margin: 24px 0 36px;
+}
+
+form {
+	display: block;
+	margin-top: 0em;
+}*/
