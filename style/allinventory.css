@@ -17,7 +17,12 @@
 .glyphicon-shopping-cart {
   color: blue;
 }
+
+.dropdown-item {
+  width: 250px; 
+}
 /*defaul navabr options for every page*/
+
 .img {
 	height: 200px;
 	width: 200px;
@@ -39,19 +44,18 @@
 }
 
 footer {
-  display: block !important;
+  display: block;
 }
 
 .footer {
-  padding: 70px !important;
-  font-size: 14px !important;
-  border-top-width: 1px !important;
-  border-top-style: solid !important;
-  border-top-color: rgb(238, 238, 238) !important;
-  text-align: center !important;
-  line-height: 3px !important;
+  padding: 70px;
+  font-size: 14px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: rgb(238, 238, 238);
+  text-align: center;
+  line-height: 3px;
 }
-/*default footer formating*/
-.dropdown-item {
-  width: 250px; 
-}
+/*footer formatting*/
+
+

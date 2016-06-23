@@ -1,0 +1,14 @@
+footer {
+  display: block;
+}
+
+.footer {
+  padding: 70px;
+  font-size: 14px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: rgb(238, 238, 238);
+  text-align: center;
+  line-height: 3px;
+}
+/*footer formatting*/

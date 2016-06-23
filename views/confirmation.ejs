@@ -34,5 +34,18 @@
 		<% } %>
 		</blockquote>
 	</div>
+	
+<footer class="footer">
+	<div>
+		&copy; Kushal Bhansali
+	</div>
+</footer>
+
 </body>
+<script type="text/javascript">
+	var cart = [];
+		function checkout() {
+			location.href = '/checkout?cart=' + JSON.stringify(cart);
+		}
+</script>
 </html>
