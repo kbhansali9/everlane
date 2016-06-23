@@ -8,6 +8,9 @@ function charge(req, res) {
   var cart = data.cart;
   var email = data.token.email;
   var token_id = data.token.id;
+  var zipCode = data.zipCode;
+  var billingAddress = data.billingAddress;
+  var shippingAddress = data.shippingAddress;
 
   Charge.chargeToken(amount, token_id, function(err, charge_id) {
     if (err) {
@@ -22,9 +25,9 @@ function charge(req, res) {
         'cart': cart,
         'charge_id': charge_id,
         'email': email,
-        'zip-code': zip-code,
-        'billing-address': billing-address,
-        'shipping-address': shipping-address
+        'zipCode': zipCode,
+        'billingAddress': billingAddress,
+        'shippingAddress': shippingAddress
       };
 
       Db.insertOne('transactions', transaction, function() {
