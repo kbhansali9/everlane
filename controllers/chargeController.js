@@ -21,7 +21,10 @@ function charge(req, res) {
         'amount': amount,
         'cart': cart,
         'charge_id': charge_id,
-        'email': email
+        'email': email,
+        'zip-code': zip-code,
+        'billing-address': billing-address,
+        'shipping-address': shipping-address
       };
 
       Db.insertOne('transactions', transaction, function() {

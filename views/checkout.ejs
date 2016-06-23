@@ -172,6 +172,9 @@
         handler.open({
           name: 'Aurora',
           description: 'Shop by the Grid',
+          billingAddress: true,
+          shippingAddress: true,
+          zipCode: true,
           amount: <%- total.toFixed(2) * 100 %>
         });
       });

@@ -55,10 +55,10 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
-          <a href="#" id="drTg" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Cart<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li class="dropdown-item"></li>
-              <li id="cartPrice"></li>
+              <li><h6 class="dropdown-item"></h6></li>
+              <li><h6 id="cartPrice"></h6></li>
               <li role="separator" class="divider"></li>
               <li id="checkoutBtn"><button onclick="checkout()" class="btn btn-success">Checkout</button></li>
             </ul>
@@ -122,7 +122,7 @@
         for (item of inventory) {
             if (item_id == item._id) {
             cart.push(item);
-            $('#drTg').dropdown('toggle');
+            //$('#drTg').dropdown('toggle');
             break;
             }
     }
