@@ -8,9 +8,9 @@ function charge(req, res) {
   var cart = data.cart;
   var email = data.token.email;
   var token_id = data.token.id;
-  var zipCode = data.zipCode;
-  var billingAddress = data.billingAddress;
-  var shippingAddress = data.shippingAddress;
+  var zipCode = data.token.zipCode;
+  var billingAddress = data.token.billingAddress;
+  var shippingAddress = data.token.shippingAddress;
 
   Charge.chargeToken(amount, token_id, function(err, charge_id) {
     if (err) {

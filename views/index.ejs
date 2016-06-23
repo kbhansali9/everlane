@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Everlane</title>
+	<title>Aurora</title>
 	<link rel='stylesheet' href='/style/index.css'>
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,95 +13,86 @@
 
 </head>
 <body>
-<div id="landing" class="navbar transparent navbar-inverse navbar-fixed-top">
-		<nav class="navbar-inner">
-			<div class="container" >
-			<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					</button>
-				</div>
+<div id="landing">
+	<nav class="navbar navbar-inverse transparent navbar-default navbar-fixed-top">
+	  	<div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="/" id="header">A U R O R A</a>
+	    </div>
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<div id="header">
-				<h1 class="text">E V E R L A N E</h1>
-				</div>
-				<div>
-				<ul class="nav navbar-nav" >
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Men<span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="/inventory">New Arrivals</a></li>
-							<li><a href="/inventory">Tops</a></li>
-							<li><a href="/inventory">Bottoms</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="/inventory">Accessories</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="#"><strong>SALE ITEMS!</strong></a></li>
-						</ul>
-					</li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Women<span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="/inventory">New Arrivals</a></li>
-							<li><a href="/inventory">Tops</a></li>
-							<li><a href="/inventory">Bottoms</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="/inventory">Accessories</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="#"><strong>SALE ITEMS!</strong></a></li>
-						</ul>
-					</li>
-					<li><a href="#">About Us</a></li>
-					<li><a href="#">Visit Us</a></li>
-				</ul>
-
-				<ul class="nav navbar-nav navbar-right">
-					<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart<span class="caret"></span></a>
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      	<ul class="nav navbar-nav" >
+				<li class="dropdown">
+					<a href="#" id="header" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Men<span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li class="dropdown-item"></li>
-              			<h4><li id="cartPrice"></li></h4>
-              			<li role="separator" class="divider"></li>
-              			<li id="checkoutBtn"><button onclick="checkout()" class="btn btn-success">Checkout</button></li>
-					</ul>
-					</li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login<span class="caret"></span></a>
-					<ul class="dropdown-menu">
-						<li><a href="/login">Returning Customer?</a></li>
-						<li><a href="register">New Customer?</a></li>
+						<li><a href="/inventory">New Arrivals</a></li>
+						<li><a href="/inventory">Tops</a></li>
+						<li><a href="/inventory">Bottoms</a></li>
 						<li role="separator" class="divider"></li>
-						<li><a href="#">Login via Facebook</a></li>
+						<li><a href="/inventory">Accessories</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#"><strong>SALE ITEMS!</strong></a></li>
 					</ul>
-					</li>
+				</li>
+				<li class="dropdown">
+					<a href="#" id="header" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Women<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="/inventory">New Arrivals</a></li>
+						<li><a href="/inventory">Tops</a></li>
+						<li><a href="/inventory">Bottoms</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="/inventory">Accessories</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#"><strong>SALE ITEMS!</strong></a></li>
+					</ul>
+				</li>
+				<li><a href="#" id="header">About Us</a></li>
+				<li><a href="#" id="header">Visit Us</a></li>
+			</ul>
+		  	<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+				<a href="#" id="header" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li class="dropdown-item"></li>
+	      			<h4><li id="cartPrice"></li></h4>
+	      			<li role="separator" class="divider"></li>
+	      			<li id="checkoutBtn"><button onclick="checkout()" class="btn btn-success">Checkout</button></li>
 				</ul>
-				</div>
-				<!--<form class="navbar-form navbar-left" role="search">
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Search">
-					</div>
-					<button type="submit" class="btn btn-default">Submit</button>
-				</form>-->
-				</div><!-- /.navbar-collapse -->
-			</div><!-- /.container-fluid-->
-		</nav>
-	<div class="center">
-		<button type="button" class="btn btn-default" id="shopNow"><a href="/inventory" style="color:#505050">SHOP NOW</a></button>
-	</div>
-	
-</div> 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><!--all the page content except the footer-->
+				</li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+				<a href="#" id="header" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="/login">Returning Customer?</a></li>
+					<li><a href="register">New Customer?</a></li>
+					<li role="separator" class="divider"></li>
+					<li><a href="#">Login via Facebook</a></li>
+				</ul>
+				</li>
+			</ul>
+	    </div><!-- /.navbar-collapse -->
+	  	</div><!-- /.container-fluid -->
+	</nav>
+</div>
+				<!-- <div>
+					<img id="header" src="file:///Users/Bhansali/code/app/brandLogos/Aurora.jpeg">
+				</div> -->
+<div class="center">
+	<button type="button" class="btn btn-default" id="shopNow"><a href="/inventory" style="color:#505050">SHOP NOW</a></button>
+</div>
+<!--all the page content except the footer-->
 <footer class="footer">
 	<div>
-		Built with love by Kushal Bhansali
+		&copy; Kushal Bhansali
 	</div>
 </footer>
 </body>
@@ -111,5 +102,14 @@
 			location.href = '/checkout?cart=' + JSON.stringify(cart);
 		}
 
+// 	(function() {
+// 		var img = document.getElementById('landing').firstChild;
+// 		img.onload = function() {
+//     	if(img.height > img.width) {
+//         	img.height = '100%';
+//         	img.width = 'auto';
+//     	}
+// 	};
+// }());
 </script>
 </html>

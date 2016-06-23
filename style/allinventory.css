@@ -1,11 +1,23 @@
-.navbar.transparent.navbar-inverse.navbar-inner {
-   background: rgba(0,0,0,0.4);
+.navbar.navbar-inverse.transparent.navbar-default {
+    background-color: rgba(0,0,0,0.5);
 }
 
-.navbar a {
-	color: #7b7474;
+.navbar.navbar-inverse.transparent.navbar-default:hover {
+    background-color: rgba(0,0,0,1);
 }
 
+#header {
+  color: white !important;
+}
+
+.navbar-brand {
+  font-family: Flamenco;
+}
+
+.glyphicon-shopping-cart {
+  color: blue;
+}
+/*defaul navabr options for every page*/
 .img {
 	height: 200px;
 	width: 200px;
@@ -24,4 +36,22 @@
 
 .price {
 	text-align: center;
+}
+
+footer {
+  display: block !important;
+}
+
+.footer {
+  padding: 70px !important;
+  font-size: 14px !important;
+  border-top-width: 1px !important;
+  border-top-style: solid !important;
+  border-top-color: rgb(238, 238, 238) !important;
+  text-align: center !important;
+  line-height: 3px !important;
+}
+/*default footer formating*/
+.dropdown-item {
+  width: 250px; 
 }

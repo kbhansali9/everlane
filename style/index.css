@@ -1,34 +1,28 @@
-/*th, td {
-
-	border: 1px solid black;
-	border-collapse: collapse;
-	padding: 5px solid black;
-	text-align: center;
-}*/
-/*table {
-
-	border: 2px solid black;
-	border-collapse: collapse;
-	text-align: center;
-
-}*/
-
-.navbar.transparent.navbar-inverse .navbar-inner:hover {
-  transition: all 0.5s;
-   background: rgba(255,255,255,255);
+.navbar.navbar-inverse.transparent.navbar-default {
+    background-color: rgba(0,0,0,0.4);
 }
 
-.nav {
-  font-family: helvetica neue;
-  font-size: 13px;
+.navbar.navbar-inverse.transparent.navbar-default:hover {
+    background-color: rgba(0,0,0,1);
 }
+
+#header {
+  color: white !important;
+}
+
+.navbar-brand {
+  font-family: Flamenco;
+}
+
+/*defaul navabr options for every page*/
 
 #landing {
-      background-image: url("http://www.creativeboysclub.com/wp-content/uploads/2012/04/0110.jpg");
+      background-image: url("http://1.bp.blogspot.com/-ViDqdiXHcY4/ToNCNe8ndlI/AAAAAAAAFKg/s0s5AvhgOGI/s1600/Zara+sequined+miniskirt+-+saved+by+ChicnCheapLiving.jpg");
       background-size: cover;
       width: 100vw;
       height: 100vh;
-      background-position: center;
+      background-position: center;  
+      background-repeat: no-repeat;
 }
 
 .center {
@@ -41,21 +35,6 @@
     color: white;
 }
 
-
-#header{
-  width:100%;
-  text-align: center;
-  font-family: Helvetica neue;
-}
-
-.navbar-inner h1, .navbar-inner a {
-  color:white !important;
-}
-
-.navbar-inner:hover h1, .navbar-inner:hover a {
-  color: #3b6a70 !important;
-}
-
 #shopNow {
   border-radius: 0px;
   color: #505050;
@@ -66,6 +45,7 @@
   margin-right: 20px;
   line-height: 30px;
 }
+
 .btn-success {
   border-radius: 0px !important;
   text-decoration: none !important;
@@ -78,15 +58,15 @@
 }
 
 footer {
-  display: block !important;
+  display: block;
 }
 
 .footer {
-  padding: 80px !important;
-  font-size: 14px !important;
-  border-top-width: 1px !important;
-  border-top-style: solid !important;
-  border-top-color: rgb(238, 238, 238) !important;
-  text-align: center !important;
-  line-height: 3 !important;
+  padding: 70px;
+  font-size: 14px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: rgb(238, 238, 238);
+  text-align: center;
+  line-height: 3px;
 }
